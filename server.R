@@ -112,14 +112,14 @@ shinyServer(function(input, output){
   })
   
   output$plot2 <- renderPlot({
-    data <- filterTable(lncRNAs_expressed_EMP1_ATT1, input)
+    data <- filterTableGene(lncRNAs_expressed_EMP1_ATT1, input)
     data <- filterTableCond(data, input)
     data=data[,grep("EMP", colnames(data))]
     pheatmap(data)  
   })
   
   output$plot4<- renderPlot({
-    data <- filterTable(lncRNAs_expressed_EMP1_ATT1, input)
+    data <- filterTableGene(lncRNAs_expressed_EMP1_ATT1, input)
     data <- filterTableCond(data, input)
     data=data[,-grep("EMP", colnames(data))]
     pheatmap(data)  
