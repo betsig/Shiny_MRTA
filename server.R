@@ -2,6 +2,9 @@ library(reshape2)
 library(shiny)
 library(pheatmap)
 library(stringr)
+library(plyr)
+library(ggplot2)
+
 lncRNAs_expressed_EMP1_ATT1 <- read.csv("data/lncRNAs_expressed_EMP1_ATT1.csv", stringsAsFactors=FALSE)
 rownames(lncRNAs_expressed_EMP1_ATT1) <- lncRNAs_expressed_EMP1_ATT1$X
 
